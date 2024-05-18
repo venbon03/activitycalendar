@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--CSS Styles -->
+    <title>VENBON | PAGE</title>
+    <base target="_top">
+    	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+
+  </head>
+<script>
+  
+  var activeLink
+  var pageTab
+  var copiedData
+  var employeeName
+
+</script>
+
+
+    <nav>
+      <h1>ACTIVITY CALENDAR</h1>
+			<ul class="burger-menu" style="position:relative;top:5px;">
+				<li class="nav-item dropdown" >
+					<a  data-bs-toggle="dropdown"  role="button" aria-expanded="false">≣</a>
+					<ul class="dropdown-menu" >
+						<a ><li class="dropdownList" style="text-align:center;cursor:pointer" onclick="addItem('Tasks')">Tasks</li></a>
+						<a ><li class="dropdownList" style="text-align:center;cursor:pointer" onclick="addItem('Activity')">Activity</li></a>
+					</ul>
+				</li>
+			</ul>
+		</form>
+    
+      <ul class="navigation" style="position:absolute;right:50px;top:20px;">
+        <li id="userAccount"><i class="fa fa-user-circle" style="font-size:20px;color:blue"></i></li>
+        <li ><a class="nav-link" onclick="addItem('Tasks')">Tasks</a></li>
+        <li ><a class="nav-link" onclick="addItem('Activity')">Activity</a></li>
+      </ul>
+    </nav>
+<body>  
+<p style="background-image: url('https://www.thebalancesmb.com/thmb/2G4fsc87I5dFyhYEBHynSXnmIJI=/2120x1414/filters:fill(auto,1)/GettyImages-904216644-ceb136d3da5c4b2dbc6802f76013ec4c.jpg');position:absolute;margin:auto;width:100%;height:100%;background-repeat:no-repeat;background-size:100% 100%;z-index:-10"></p>
+
+<?!=include("Calendar")?>
+
+<div id="log-in" class="d-flex ">
+<?!= include('Login');?>
+</div>	
+<br/>
+<br/>
+<div id="page">
+  <?!= include('ActivityFormat.html');?>
+</div>
+</body>
+<div id="loading" class="d-flex justify-content-center align-items-center invisible">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+
+
+<div id="dropdown_menu" class="invisible"> 
+  <div id="content_menu">
+  <div class="Closex" onclick="hideMenu()">&times;</div>
+    <div class="selectOption" onclick="copy()">Copy</div>
+    <div class="selectOption" onclick="paste()">Paste</div>
+    <div id="Transfer_option" class="selectOption" onclick="transferItem_toActivity()">Transfer to Activity</div>
+  </div>
+
+<style>
+  #dropdown_menu {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    width:100vw;
+    height:100vh;
+    background-color:rgb(255,255,255,0.50);
+  }
+  #content_menu {
+    position:absolute;
+    left:40%;
+    top:30%;
+    background-color:#EAECEE;
+    width:250px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+    .Closex{
+    position:relative;
+    left:200px;
+    text-align:center;
+    width:20px;
+    cursor:pointer;
+    z-index:12;
+    }
+    .Closex:hover {
+      background:red;
+      color:white;
+    }
+  .selectOption{
+    width:100%;
+    cursor:pointer;
+  }
+  .selectOption:hover{
+    color:blue;
+  }  
+
+</style>
+
+</div>
+
+</html>
