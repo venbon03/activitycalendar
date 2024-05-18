@@ -1,13 +1,4 @@
-<style>
-    #loading{
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:11;
-    width:100vw;
-    height:100vh;
-    background-color:rgb(255,255,255,0.50);
-  }
+
 nav {
   position: sticky;
   top: 0;
@@ -35,8 +26,7 @@ a:hover{
   cursor:pointer;
 
 }
-body {
-}
+
 a li{
 	color:#2e4053;
 }
@@ -44,48 +34,8 @@ li:hover{
 	color:black;
 }
 
-.card {
-	position:relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width:350px;
-  height:420px;
-  margin: 10px;
-  text-align: top;
-  font-family: arial;
-  display: inline-block;
-  top:0px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  background-color: #D5DBDB;
-  text-align: left;
-  cursor: pointer;
-  width: 100%;
-  height:20%;
-  font-size: 12px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-
 html {
   scroll-behavior: smooth;
-}
-#motherfile {
-	background:transparent;
-	width:95%;
-	position:relative;
-	margin:auto;
-}
-
-#motherfile tr{
-}
-#motherfile td{
-	padding:10px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -98,5 +48,3 @@ html {
 		visibility: hidden;
 	}
 }
-
-</style>
