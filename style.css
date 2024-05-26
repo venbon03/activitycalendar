@@ -17,7 +17,7 @@ nav ul {
   gap: 1.9rem;
   list-style-type: none;
 }
-.nav-link:hover{
+.nav:hover{
   color:green;
 }
 
@@ -25,13 +25,3 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 1000px) {
-	.burger-menu {
-		visibility: hidden;
-	}
-}
-@media screen and (max-width: 1000px) {
-	.navigation {
-		visibility: hidden;
-	}
-}
