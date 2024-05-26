@@ -17,7 +17,7 @@ nav ul {
   gap: 1.9rem;
   list-style-type: none;
 }
-.nav:hover{
+nav:hover{
   color:green;
 }
 
