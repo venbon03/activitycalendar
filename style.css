@@ -6,8 +6,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3.5rem;
-  background-color: rgba(0, 0, 0, 1);
+  padding: 1.5rem 4rem;
+  background-color: #234E05;
   box-shadow: 0 5px 5px rgba(255, 255, 255, 0.1);
   height:70px;
   color:white;
